@@ -1,0 +1,1225 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Vizag Steel | Vizag Steel Price-List</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f9;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #0a5a83;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 18px 20px;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            width: 48px;
+            height: 48px;
+            background: #0a5a83;
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            color: #0a5a83;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand-subtitle {
+            font-size: 12px;
+            color: #777;
+            margin-top: 2px;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: #0a5a83;
+
+            border: 1px solid #0a5a83;
+
+            padding: 8px 18px;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #0a5a83;
+            color: white;
+        }
+
+
+        /* PAGE TITLE */
+
+        .page-title {
+            background: linear-gradient(
+                135deg,
+                #0a5a83,
+                #0875a5
+            );
+
+            color: white;
+
+            padding: 45px 20px;
+
+            text-align: center;
+        }
+
+        .page-title h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+
+        /* MAIN */
+
+        .container {
+            max-width: 1000px;
+
+            margin: 40px auto;
+
+            padding: 0 20px;
+        }
+
+        .about-card {
+            background: white;
+
+            border-radius: 12px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 5px 25px rgba(0,0,0,0.07);
+        }
+
+
+        /* INTRO */
+
+        .intro {
+            background: #f0f7fb;
+
+            border-left: 4px solid #0a5a83;
+
+            padding: 20px;
+
+            margin-bottom: 32px;
+
+            border-radius: 5px;
+
+            color: #444;
+
+            font-size: 15px;
+        }
+
+
+        /* SECTIONS */
+
+        .about-section {
+            margin-bottom: 34px;
+        }
+
+        .about-section h2 {
+            color: #0a5a83;
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+
+            padding-bottom: 7px;
+
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .about-section p {
+            font-size: 15px;
+
+            color: #444;
+
+            margin-bottom: 12px;
+        }
+
+        .about-section ul {
+            padding-left: 25px;
+
+            margin-top: 8px;
+        }
+
+        .about-section li {
+            font-size: 15px;
+
+            margin-bottom: 7px;
+
+            color: #444;
+        }
+
+
+        /* INFO GRID */
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+
+            margin: 25px 0 35px;
+        }
+
+        .info-box {
+            background: #f7fafc;
+
+            border: 1px solid #e1e7eb;
+
+            border-radius: 8px;
+
+            padding: 20px;
+        }
+
+        .info-box .label {
+            color: #777;
+
+            font-size: 13px;
+
+            margin-bottom: 4px;
+        }
+
+        .info-box .value {
+            color: #0a5a83;
+
+            font-size: 17px;
+
+            font-weight: 700;
+        }
+
+
+        /* HISTORY TIMELINE */
+
+        .timeline {
+            position: relative;
+
+            margin: 25px 0;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-left: 35px;
+
+            padding-bottom: 25px;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: 7px;
+            top: 7px;
+
+            width: 12px;
+            height: 12px;
+
+            background: #0a5a83;
+
+            border-radius: 50%;
+        }
+
+        .timeline-item::after {
+            content: "";
+
+            position: absolute;
+
+            left: 12px;
+            top: 19px;
+
+            width: 2px;
+
+            height: calc(100% - 8px);
+
+            background: #d8e5eb;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .timeline-year {
+            color: #0a5a83;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+            margin-bottom: 4px;
+        }
+
+        .timeline-text {
+            color: #444;
+
+            font-size: 14px;
+        }
+
+
+        /* LEADERSHIP */
+
+        .leader-card {
+            background: #f7fafc;
+
+            border: 1px solid #e1e7eb;
+
+            border-radius: 10px;
+
+            padding: 22px;
+
+            margin-top: 18px;
+        }
+
+        .leader-name {
+            color: #0a5a83;
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            margin-bottom: 3px;
+        }
+
+        .leader-position {
+            color: #777;
+
+            font-size: 14px;
+
+            margin-bottom: 12px;
+        }
+
+        .leader-card p {
+            margin-bottom: 8px;
+        }
+
+
+        /* HIGHLIGHT BOX */
+
+        .highlight {
+            background: #f0f7fb;
+
+            border-left: 4px solid #0a5a83;
+
+            padding: 20px;
+
+            border-radius: 6px;
+
+            margin-top: 20px;
+        }
+
+        .highlight h3 {
+            color: #0a5a83;
+
+            font-size: 18px;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* IMPORTANT NOTICE */
+
+        .important {
+            background: #fff1f1;
+
+            border-left: 4px solid #c62828;
+
+            padding: 20px;
+
+            border-radius: 6px;
+
+            margin-top: 35px;
+        }
+
+        .important h3 {
+            color: #b71c1c;
+
+            margin-bottom: 10px;
+
+            font-size: 19px;
+        }
+
+        .important p {
+            font-size: 15px;
+
+            color: #444;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* CONTACT */
+
+        .contact-box {
+            background: #f7fafc;
+
+            border: 1px solid #e1e7eb;
+
+            padding: 20px;
+
+            border-radius: 8px;
+
+            margin-top: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 7px;
+        }
+
+        .contact-box strong {
+            color: #0a5a83;
+        }
+
+
+        /* FOOTER */
+
+        .footer {
+            background: #073f5c;
+
+            color: white;
+
+            margin-top: 50px;
+
+            padding: 25px 20px;
+
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 13px;
+
+            opacity: 0.9;
+
+            margin: 4px 0;
+        }
+
+        .footer a {
+            color: white;
+
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .header-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .home-btn {
+                width: 100%;
+
+                text-align: center;
+            }
+
+            .page-title {
+                padding: 35px 15px;
+            }
+
+            .page-title h1 {
+                font-size: 27px;
+            }
+
+            .container {
+                margin: 25px auto;
+
+                padding: 0 12px;
+            }
+
+            .about-card {
+                padding: 22px 18px;
+
+                border-radius: 8px;
+            }
+
+            .about-section h2 {
+                font-size: 19px;
+            }
+
+            .about-section p,
+            .about-section li,
+            .important p {
+                font-size: 14px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-name {
+                font-size: 19px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+
+            <div class="logo-area">
+
+                <div class="logo-box">
+                    VS
+                </div>
+
+                <div>
+
+                    <div class="brand-name">
+                        Vizag Steel Price-List
+                    </div>
+
+                    <div class="brand-subtitle">
+                        Steel Products & Price Information
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="home-btn"
+            >
+                ← Back to Home
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-title">
+
+        <h1>
+            About Vizag Steel
+        </h1>
+
+        <p>
+            History, Leadership & Company Information
+        </p>
+
+    </section>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+        <div class="about-card">
+
+
+            <!-- INTRO -->
+
+            <div class="intro">
+
+                <strong>Vizag Steel</strong>, officially known as
+                <strong>Visakhapatnam Steel Plant (VSP)</strong>,
+                is the corporate entity of
+                <strong>Rashtriya Ispat Nigam Limited (RINL)</strong>.
+
+                RINL is a Navratna Public Sector Enterprise under the
+                Ministry of Steel, Government of India.
+
+                The Visakhapatnam Steel Plant is known as the country's
+                first shore-based integrated steel plant.
+
+            </div>
+
+
+
+            <!-- BASIC INFORMATION -->
+
+            <section class="about-section">
+
+                <h2>
+                    Company at a Glance
+                </h2>
+
+
+                <div class="info-grid">
+
+
+                    <div class="info-box">
+
+                        <div class="label">
+                            Official Name
+                        </div>
+
+                        <div class="value">
+                            Rashtriya Ispat Nigam Limited
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <div class="label">
+                            Steel Plant
+                        </div>
+
+                        <div class="value">
+                            Visakhapatnam Steel Plant
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <div class="label">
+                            Common Name
+                        </div>
+
+                        <div class="value">
+                            Vizag Steel
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <div class="label">
+                            Established / Incorporated
+                        </div>
+
+                        <div class="value">
+                            RINL – 18 February 1982
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <div class="label">
+                            Government Department
+                        </div>
+
+                        <div class="value">
+                            Ministry of Steel
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <div class="label">
+                            Headquarters
+                        </div>
+
+                        <div class="value">
+                            Visakhapatnam, Andhra Pradesh
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- HISTORY -->
+
+            <section class="about-section">
+
+                <h2>
+                    History of Vizag Steel
+                </h2>
+
+
+                <p>
+                    The idea of establishing an integrated steel plant
+                    at Visakhapatnam emerged from the Government of
+                    India's objective of promoting industrial development
+                    and meeting the aspirations of the people of Andhra
+                    Pradesh.
+                </p>
+
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-year">
+                            1970
+                        </div>
+
+                        <div class="timeline-text">
+
+                            The Government of India announced the decision
+                            to establish an integrated public-sector steel
+                            plant at Visakhapatnam.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-year">
+                            20 January 1971
+                        </div>
+
+                        <div class="timeline-text">
+
+                            The foundation stone of the Visakhapatnam
+                            Steel Plant was laid by the then Prime Minister
+                            of India, Smt. Indira Gandhi.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-year">
+                            1979
+                        </div>
+
+                        <div class="timeline-text">
+
+                            India and the erstwhile Soviet Union signed
+                            an agreement for setting up the integrated
+                            steel plant.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-year">
+                            1982
+                        </div>
+
+                        <div class="timeline-text">
+
+                            Construction of the plant started on
+                            1 February 1982. On 18 February 1982,
+                            the Government of India formed Rashtriya
+                            Ispat Nigam Limited (RINL).
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-year">
+                            1989–1990
+                        </div>
+
+                        <div class="timeline-text">
+
+                            The plant achieved its first casting of
+                            hot metal into pig iron, marking an important
+                            milestone in its development.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-year">
+                            1992
+                        </div>
+
+                        <div class="timeline-text">
+
+                            The original integrated plant was commissioned
+                            and began its journey as a major steel producer.
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FOUNDER / FOUNDING -->
+
+            <section class="about-section">
+
+                <h2>
+                    Who Founded Vizag Steel?
+                </h2>
+
+
+                <p>
+                    Vizag Steel does not have a single individual founder
+                    in the conventional private-company sense.
+                </p>
+
+
+                <p>
+                    According to RINL's official history, the sustained
+                    campaign led by
+                    <strong>Shri Tenneti Viswanadham</strong>
+                    played an important role in the establishment of the
+                    Visakhapatnam Steel Plant.
+                </p>
+
+
+                <p>
+                    The Government of India subsequently took the decision
+                    to establish the integrated steel plant, while
+                    <strong>Smt. Indira Gandhi</strong>, the then Prime
+                    Minister of India, laid its foundation stone on
+                    <strong>20 January 1971</strong>.
+                </p>
+
+
+                <div class="highlight">
+
+                    <h3>
+                        A Collective National Project
+                    </h3>
+
+                    <p>
+                        The development of Vizag Steel was therefore a
+                        major Government of India project involving
+                        political leadership, public institutions,
+                        Indian engineers and workers, and technical
+                        cooperation with the erstwhile Soviet Union.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- WHO RUNS IT -->
+
+            <section class="about-section">
+
+                <h2>
+                    Who Runs Vizag Steel?
+                </h2>
+
+
+                <p>
+                    Visakhapatnam Steel Plant operates under
+                    <strong>Rashtriya Ispat Nigam Limited (RINL)</strong>,
+                    a Navratna Public Sector Enterprise under the
+                    administrative control of the
+                    <strong>Ministry of Steel, Government of India</strong>.
+                </p>
+
+
+                <div class="leader-card">
+
+                    <div class="leader-name">
+                        Shri MNVS Prabhakar
+                    </div>
+
+                    <div class="leader-position">
+                        Chairman-cum-Managing Director (CMD), RINL
+                    </div>
+
+                    <p>
+                        Shri MNVS Prabhakar assumed charge as
+                        Chairman-cum-Managing Director of RINL in
+                        May 2026.
+                    </p>
+
+                    <p>
+                        He is an experienced steel-sector professional
+                        with more than three decades of experience in
+                        the Indian steel industry.
+                    </p>
+
+                </div>
+
+
+                <p style="margin-top:18px;">
+
+                    The CMD is the chief executive of the company and
+                    is responsible for the efficient functioning of
+                    RINL, subject to the company's Board of Directors
+                    and the Government of India.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- PRODUCTS -->
+
+            <section class="about-section">
+
+                <h2>
+                    What Does Vizag Steel Produce?
+                </h2>
+
+
+                <p>
+                    RINL's Visakhapatnam Steel Plant produces a range
+                    of steel and iron products for industrial,
+                    infrastructure, construction and engineering
+                    applications.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        TMT Rebars
+                    </li>
+
+                    <li>
+                        Wire Rods
+                    </li>
+
+                    <li>
+                        Billets
+                    </li>
+
+                    <li>
+                        Rounds
+                    </li>
+
+                    <li>
+                        Squares
+                    </li>
+
+                    <li>
+                        Angles
+                    </li>
+
+                    <li>
+                        Channels
+                    </li>
+
+                    <li>
+                        Pig Iron
+                    </li>
+
+                    <li>
+                        Other long steel products
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- IMPORTANCE -->
+
+            <section class="about-section">
+
+                <h2>
+                    Why Vizag Steel is Important
+                </h2>
+
+
+                <p>
+                    Visakhapatnam Steel Plant is significant to India's
+                    steel industry because it is the country's first
+                    shore-based integrated steel plant.
+                </p>
+
+
+                <p>
+                    The plant serves customers across various industrial
+                    sectors and has a nationwide marketing and distribution
+                    network.
+                </p>
+
+
+                <p>
+                    RINL is also recognized as a Navratna Public Sector
+                    Enterprise under the Ministry of Steel, Government
+                    of India.
+                </p>
+
+            </section>
+
+
+
+            <!-- OFFICIAL INFORMATION -->
+
+            <section class="about-section">
+
+                <h2>
+                    Official Information
+                </h2>
+
+
+                <p>
+                    For official information about RINL, Visakhapatnam
+                    Steel Plant, products, sales offices, notices,
+                    appointments and company announcements, users should
+                    refer to the official RINL website.
+                </p>
+
+
+                <p>
+
+                    Official Website:
+                    <a
+                        href="https://www.vizagsteel.com/"
+                        target="_blank"
+                        style="
+                            color:#0a5a83;
+                            font-weight:600;
+                            text-decoration:none;
+                        "
+                    >
+                        www.vizagsteel.com
+                    </a>
+
+                </p>
+
+            </section>
+
+
+
+            <!-- IMPORTANT NOTICE -->
+
+            <div class="important">
+
+                <h3>
+                    Important Notice
+                </h3>
+
+
+                <p>
+
+                    This About page provides general information about
+                    Rashtriya Ispat Nigam Limited (RINL) and Visakhapatnam
+                    Steel Plant based primarily on publicly available
+                    official information.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        This Website is the official website of
+                        Rashtriya Ispat Nigam Limited (RINL) / Visakhapatnam
+                        Steel Plant.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    "Vizag Steel" and related names, trademarks and
+                    intellectual property belong to their respective
+                    owners. This Website does not claim ownership of
+                    those trademarks.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <section
+                class="about-section"
+                style="margin-top:35px;"
+            >
+
+                <h2>
+                    RINL Registered Office
+                </h2>
+
+
+                <div class="contact-box">
+
+                    <p>
+
+                        <strong>
+                            Rashtriya Ispat Nigam Limited (RINL)
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+                        Administrative Building
+                    </p>
+
+                    <p>
+                        Visakhapatnam Steel Plant
+                    </p>
+
+                    <p>
+                        Visakhapatnam – 530031
+                    </p>
+
+                    <p>
+                        Andhra Pradesh, India
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Vizag Steel Price-List Website.
+            All Rights Reserved.
+        </p>
+
+
+        <p>
+
+            <a href="about.html">
+                About
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="terms-conditions.html">
+                Terms & Conditions
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="refund-policy.html">
+                Refund Policy
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="disclaimer.html">
+                Disclaimer
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
+```

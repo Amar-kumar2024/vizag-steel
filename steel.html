@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Booking Rates</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: #f5f7f8;
+
+            font-family: "Roboto", Arial, sans-serif;
+        }
+
+
+        /* =================================
+           LIVE BOOKING RATES SECTION
+        ================================= */
+
+        .live-booking-section {
+
+            width: 100%;
+
+            height: 374px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    105deg,
+                    #063d5d 0%,
+                    #075074 48%,
+                    #0877a8 100%
+                );
+
+            border-radius:
+                0
+                0
+                62px
+                62px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: #ffffff;
+
+            padding-top: 79px;
+        }
+
+
+        /* =================================
+           MAIN HEADING
+        ================================= */
+
+        .live-booking-section h1 {
+
+            margin: 0;
+
+            color: #ffffff;
+
+            font-size: 68px;
+
+            font-weight: 700;
+
+            line-height: 1.08;
+
+            letter-spacing: -1.5px;
+        }
+
+
+        /* =================================
+           SUBTITLE
+        ================================= */
+
+        .live-subtitle {
+
+            margin-top: 17px;
+
+            color: #ffffff;
+
+            font-size: 25px;
+
+            font-weight: 400;
+
+            line-height: 1.4;
+        }
+
+
+        /* =================================
+           LIVE NOW BOX
+        ================================= */
+
+        .live-status {
+
+            width: 633px;
+
+            height: 52px;
+
+            margin-top: 23px;
+
+            background: #ffffff;
+
+            border-radius: 6px;
+
+            border-left: 7px solid #ffbd00;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #59616b;
+
+            font-size: 20px;
+
+            font-weight: 400;
+
+            box-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =================================
+           RED LIVE DOT
+        ================================= */
+
+        .live-dot {
+
+            width: 20px;
+
+            height: 20px;
+
+            margin-right: 7px;
+
+            border-radius: 50%;
+
+            background: #df3448;
+
+            position: relative;
+
+            display: inline-block;
+        }
+
+
+        .live-dot::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 6px;
+
+            height: 6px;
+
+            background: #ffffff;
+
+            border-radius: 50%;
+
+            top: 7px;
+
+            left: 7px;
+        }
+
+
+        /* =================================
+           LIVE NOW TEXT
+        ================================= */
+
+        .live-now {
+
+            color: #505861;
+
+            font-weight: 700;
+        }
+
+
+        /* =================================
+           DATE TEXT
+        ================================= */
+
+        .live-date {
+
+            color: #59616b;
+
+            font-weight: 400;
+        }
+
+
+        /* =================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .live-booking-section {
+
+                height: 340px;
+
+                padding-top: 65px;
+
+                border-radius:
+                    0
+                    0
+                    50px
+                    50px;
+            }
+
+
+            .live-booking-section h1 {
+
+                font-size: 55px;
+            }
+
+
+            .live-subtitle {
+
+                font-size: 21px;
+            }
+
+
+            .live-status {
+
+                width: 590px;
+
+                max-width: 90%;
+
+                font-size: 18px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .live-booking-section {
+
+                height: 310px;
+
+                padding-top: 55px;
+
+                border-radius:
+                    0
+                    0
+                    40px
+                    40px;
+            }
+
+
+            .live-booking-section h1 {
+
+                font-size: 40px;
+
+                letter-spacing: -0.5px;
+            }
+
+
+            .live-subtitle {
+
+                margin-top: 13px;
+
+                font-size: 17px;
+
+                padding: 0 15px;
+            }
+
+
+            .live-status {
+
+                width: calc(100% - 30px);
+
+                height: auto;
+
+                min-height: 52px;
+
+                margin-top: 20px;
+
+                padding: 10px 12px;
+
+                font-size: 15px;
+
+                line-height: 1.4;
+            }
+
+
+            .live-dot {
+
+                width: 17px;
+
+                height: 17px;
+
+                flex-shrink: 0;
+            }
+
+
+            .live-dot::after {
+
+                width: 5px;
+
+                height: 5px;
+
+                top: 6px;
+
+                left: 6px;
+            }
+        }
+
+
+        @media (max-width: 400px) {
+
+            .live-booking-section h1 {
+
+                font-size: 34px;
+            }
+
+
+            .live-subtitle {
+
+                font-size: 15px;
+            }
+
+
+            .live-status {
+
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         LIVE BOOKING RATES
+    ================================= -->
+
+    <section class="live-booking-section">
+
+
+        <h1>
+            Live Booking Rates
+        </h1>
+
+
+        <div class="live-subtitle">
+            Authorized Vizag Steel (RINL) Supply Desk
+        </div>
+
+
+        <div class="live-status">
+
+            <span class="live-dot"></span>
+
+            <span class="live-now">
+                Live Now:
+            </span>
+
+            &nbsp;
+
+            </span>
+
+    Current plant loading rates for
+    <span class="date-auto"></span>
+
+</div>
+
+
+        </div>
+
+
+    </section>
+
+
+</body>
+</html>
+
+<style>
+    /* =========================================
+   PRODUCT RATES SECTION
+========================================= */
+
+.product-rates-section {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 48px 7% 55px;
+
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+
+/* =========================================
+   TWO PRODUCT CARDS
+========================================= */
+
+.product-rates-container {
+
+    width: 100%;
+
+    max-width: 1620px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+
+    background: #ffffff;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    min-height: 780px;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image {
+
+    width: 100%;
+
+    height: 237px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #d0d5d0;
+}
+
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   AVAILABLE BADGE
+========================================= */
+
+.availability {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    background: #20ae4b;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: .2px;
+}
+
+
+/* =========================================
+   PRODUCT CONTENT
+========================================= */
+
+.product-content {
+
+    padding: 28px 29px 30px;
+}
+
+
+.product-content h2 {
+
+    margin: 0 0 29px;
+
+    color: #073b5d;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.product-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================
+   PRODUCT TABLE
+========================================= */
+
+.product-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.product-table thead tr {
+
+    height: 44px;
+
+    background: #f5f6f7;
+
+    border-top: 1px solid #e1e4e6;
+
+    border-bottom: 1px solid #d8dde0;
+}
+
+
+.product-table th {
+
+    padding: 0 8px;
+
+    color: #092f49;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+.product-table th:nth-child(1),
+.product-table td:nth-child(1) {
+
+    width: 18%;
+}
+
+
+.product-table th:nth-child(2),
+.product-table td:nth-child(2) {
+
+    width: 29%;
+}
+
+
+.product-table th:nth-child(3),
+.product-table td:nth-child(3) {
+
+    width: 32%;
+}
+
+
+.product-table th:nth-child(4),
+.product-table td:nth-child(4) {
+
+    width: 21%;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.product-table tbody tr {
+
+    height: 54px;
+
+    border-bottom: 1px solid #dfe3e5;
+}
+
+
+.product-table td {
+
+    padding: 0 6px;
+
+    color: #111111;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   BOOK BUTTON
+========================================= */
+
+.book-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 83px;
+
+    height: 35px;
+
+    background: #0879b9;
+
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+
+.book-btn:hover {
+
+    background: #05669d;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   WHATSAPP BUTTON
+========================================= */
+
+.product-whatsapp {
+
+    position: fixed;
+
+    right: 45px;
+
+    bottom: 27px;
+
+    width: 77px;
+
+    height: 77px;
+
+    border-radius: 50%;
+
+    background: #20d36b;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 43px;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 5px 14px rgba(0, 0, 0, .12);
+
+    transition: .25s ease;
+}
+
+
+.product-whatsapp:hover {
+
+    transform: scale(1.08);
+
+    background: #16bb5a;
+}
+
+
+.product-whatsapp span {
+
+    transform: rotate(-20deg);
+}
+
+
+/* =========================================
+   LARGE SCREEN
+========================================= */
+
+@media (min-width: 1600px) {
+
+    .product-rates-section {
+
+        padding-left: 7%;
+
+        padding-right: 7%;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .product-rates-section {
+
+        padding-left: 4%;
+
+        padding-right: 4%;
+    }
+
+
+    .product-rates-container {
+
+        gap: 20px;
+    }
+
+
+    .product-content {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    .product-content h2 {
+
+        font-size: 27px;
+    }
+
+
+    .product-table td {
+
+        font-size: 14px;
+    }
+
+
+    .product-table th {
+
+        font-size: 13px;
+    }
+
+
+    .book-btn {
+
+        width: 70px;
+
+        height: 33px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .product-rates-section {
+
+        padding: 35px 15px 45px;
+    }
+
+
+    .product-rates-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        gap: 25px;
+    }
+
+
+    .product-card {
+
+        min-height: auto;
+    }
+
+
+    .product-image {
+
+        height: 220px;
+    }
+
+
+    .product-content {
+
+        padding: 24px 18px;
+    }
+
+
+    .product-content h2 {
+
+        font-size: 27px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .product-table {
+
+        min-width: 650px;
+    }
+
+
+    .product-table-wrapper {
+
+        overflow-x: auto;
+    }
+
+
+    .product-whatsapp {
+
+        width: 62px;
+
+        height: 62px;
+
+        right: 18px;
+
+        bottom: 20px;
+
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .product-image {
+
+        height: 190px;
+    }
+
+
+    .product-content h2 {
+
+        font-size: 24px;
+    }
+
+
+    .availability {
+
+        top: 14px;
+
+        right: 14px;
+
+        font-size: 12px;
+
+        padding: 7px 12px;
+    }
+
+}
+</style>
+
+<br>
+
+
+<br>
+
+<div class="product-rates-container">
+<div class="product-card">
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-image">
+
+                <img
+                    src="steel rod.png"
+                    alt="Fe 500D TMT Rebars"
+                >
+
+                <span class="availability">
+                    AVAILABLE
+                </span>
+
+            </div>
+
+
+            <!-- CARD CONTENT -->
+
+            <div class="product-content">
+
+                <h2>
+                    Fe 500D TMT Rebars
+                </h2>
+
+
+                <!-- TABLE -->
+
+                <div class="product-table-wrapper">
+
+                    <table class="product-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    SIZE
+                                </th>
+
+                                <th>
+                                    RATE/KG
+                                </th>
+
+                                <th>
+                                    RATE/MT
+                                </th>
+
+                                <th>
+                                    BOOKING
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    8 mm
+                                </td>
+
+                                <td>
+                                    ₹36.90 – 48.60
+                                </td>
+
+                                <td>
+                                    ₹37,260 – 48,600
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    10 mm
+                                </td>
+
+                                <td>
+                                    ₹32.40 – 53.10
+                                </td>
+
+                                <td>
+                                    ₹32,400 – 53,460
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    12 mm
+                                </td>
+
+                                <td>
+                                    ₹36.90 – 53.10
+                                </td>
+
+                                <td>
+                                    ₹36,450 – 52,650
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    16 mm
+                                </td>
+
+                                <td>
+                                    ₹41.40 – 53.10
+                                </td>
+
+                                <td>
+                                    ₹41,310 – 52,650
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    20 mm
+                                </td>
+
+                                <td>
+                                    ₹36.90 – 49.50
+                                </td>
+
+                                <td>
+                                    ₹36,450 – 49,410
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    25 mm
+                                </td>
+
+                                <td>
+                                    ₹37.80 – 48.60
+                                </td>
+
+                                <td>
+                                    ₹38,070 – 48,600
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             WIRE ROD CARD
+        ================================== -->
+
+        <div class="product-card">
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-image">
+
+                <img
+                    src="steel-wires.png"
+                    alt="steel wires"
+                >
+
+                <span class="availability">
+                    AVAILABLE
+                </span>
+
+            </div>
+
+
+            <!-- CARD CONTENT -->
+
+            <div class="product-content">
+
+                <h2>
+                    Steel Wires Coils (SWC)
+                </h2>
+
+
+                <!-- TABLE -->
+
+                <div class="product-table-wrapper">
+
+                    <table class="product-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    DIAMETER
+                                </th>
+
+                                <th>
+                                    RATE/KG
+                                </th>
+
+                                <th>
+                                    RATE/MT
+                                </th>
+
+                                <th>
+                                    BOOKING
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    5.5 mm
+                                </td>
+
+                                <td>
+                                    ₹32.40 – 48.60
+                                </td>
+
+                                <td>
+                                    ₹32,400 – 48,600
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    6 mm
+                                </td>
+
+                                <td>
+                                    ₹37.80 – 48.60
+                                </td>
+
+                                <td>
+                                    ₹38,070 – 48,600
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    8 mm
+                                </td>
+
+                                <td>
+                                    ₹33.30 – 45.00
+                                </td>
+
+                                <td>
+                                    ₹33,534 – 44,550
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    10 mm
+                                </td>
+
+                                <td>
+                                    ₹33.30 – 45.00
+                                </td>
+
+                                <td>
+                                    ₹33,534 – 44,550
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    12 mm
+                                </td>
+
+                                <td>
+                                    ₹33.30 – 54.90
+                                </td>
+
+                                <td>
+                                    ₹33,777 – 55,080
+                                </td>
+
+                                <td>
+                                    <a href="form.html" class="book-btn">
+                                        Book
+                                    </a>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<div class="product-rates-container">
+
+
+    <!-- ================================
+         1. TMT REBARS
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="square pipes.png" alt="Fe 500D TMT Rebars">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+            <h2>Steel Square Pipes (SSP)</h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>SIZE</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>8 mm</td>
+                            <td>₹36.90 – 48.60</td>
+                            <td>₹37,260 – 48,600</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>10 mm</td>
+                            <td>₹32.40 – 53.10</td>
+                            <td>₹32,400 – 53,460</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>12 mm</td>
+                            <td>₹36.90 – 53.10</td>
+                            <td>₹36,450 – 52,650</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>16 mm</td>
+                            <td>₹41.40 – 53.10</td>
+                            <td>₹41,310 – 52,650</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>20 mm</td>
+                            <td>₹36.90 – 49.50</td>
+                            <td>₹36,450 – 49,410</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>25 mm</td>
+                            <td>₹37.80 – 48.60</td>
+                            <td>₹38,070 – 48,600</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         2. WIRE RODS
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <img src="round bars.png" alt="Wire Rod Coils">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+
+        </div>
+
+        <div class="product-content">
+
+            <h2>Steel Round Bars (SRB)</h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>DIAMETER</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>5.5 mm</td>
+                            <td>₹32.40 – 48.60</td>
+                            <td>₹32,400 – 48,600</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>6 mm</td>
+                            <td>₹37.80 – 48.60</td>
+                            <td>₹38,070 – 48,600</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>8 mm</td>
+                            <td>₹33.30 – 45.00</td>
+                            <td>₹33,534 – 44,550</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>10 mm</td>
+                            <td>₹33.30 – 45.00</td>
+                            <td>₹33,534 – 44,550</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>12 mm</td>
+                            <td>₹33.30 – 54.90</td>
+                            <td>₹33,777 – 55,080</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         3. TMT 550D
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="steel pipes.png" alt="Fe 550D TMT Rebars">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+           <h2> Steel pipes (SHP)</h2> 
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>SIZE</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>8 mm</td>
+                            <td>₹38.00 – 51.00</td>
+                            <td>₹38,000 – 51,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>10 mm</td>
+                            <td>₹39.00 – 52.00</td>
+                            <td>₹39,000 – 52,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>12 mm</td>
+                            <td>₹40.00 – 53.00</td>
+                            <td>₹40,000 – 53,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         4. EQUAL ANGLES
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="steel angle.png" alt="Equal Angles">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+            <h2>Steel Equal Angles(SEA)</h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>SIZE</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>25 x 25</td>
+                            <td>₹45.00 – 55.00</td>
+                            <td>₹45,000 – 55,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>40 x 40</td>
+                            <td>₹46.00 – 56.00</td>
+                            <td>₹46,000 – 56,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>50 x 50</td>
+                            <td>₹47.00 – 57.00</td>
+                            <td>₹47,000 – 57,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         5. CHANNELS
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="hex bars.png" alt="Steel Channels">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+            <h2>Steel Hex bars(SHB)</h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>SIZE</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>75 mm</td>
+                            <td>₹48.00 – 58.00</td>
+                            <td>₹48,000 – 58,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>100 mm</td>
+                            <td>₹49.00 – 59.00</td>
+                            <td>₹49,000 – 59,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>125 mm</td>
+                            <td>₹50.00 – 60.00</td>
+                            <td>₹50,000 – 60,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         6. I-BEAMS
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="flat bars.png" alt="I Beams">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+            <h2>Steel Flat Bars (SFB)</h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>SIZE</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>100 mm</td>
+                            <td>₹49.00 – 59.00</td>
+                            <td>₹49,000 – 59,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>125 mm</td>
+                            <td>₹50.00 – 60.00</td>
+                            <td>₹50,000 – 60,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>150 mm</td>
+                            <td>₹51.00 – 61.00</td>
+                            <td>₹51,000 – 61,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         7. MS PLATES
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="i beans.png" alt="MS Plates">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+            <h2>steel I Beams(SIB) </h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>THICKNESS</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>6 mm</td>
+                            <td>₹48.00 – 58.00</td>
+                            <td>₹48,000 – 58,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>8 mm</td>
+                            <td>₹49.00 – 59.00</td>
+                            <td>₹49,000 – 59,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>10 mm</td>
+                            <td>₹50.00 – 60.00</td>
+                            <td>₹50,000 – 60,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         8. BILLETS
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="hollo sections.png" alt="Steel Billets">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+            <h2>Steel Hollow Sections (SHS)</h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>GRADE</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Fe 500</td>
+                            <td>₹44.50 – 48.00</td>
+                            <td>₹44,500 – 48,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Fe 500D</td>
+                            <td>₹45.00 – 49.00</td>
+                            <td>₹45,000 – 49,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Special Grade</td>
+                            <td>₹46.00 – 50.00</td>
+                            <td>₹46,000 – 50,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         9. ROUND BARS
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="wire mesh.png" alt="Round Bars">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+            <h2>Steel wire mesh (SWM)</h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>SIZE</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>16 mm</td>
+                            <td>₹44.00 – 54.00</td>
+                            <td>₹44,000 – 54,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>20 mm</td>
+                            <td>₹45.00 – 55.00</td>
+                            <td>₹45,000 – 55,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>25 mm</td>
+                            <td>₹46.00 – 56.00</td>
+                            <td>₹46,000 – 56,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         10. STRUCTURAL STEEL
+    ================================= -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="steel bolts.png" alt="Structural Steel">
+
+            <span class="availability">
+                AVAILABLE
+            </span>
+        </div>
+
+        <div class="product-content">
+
+            <h2>Special Steel products</h2>
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>PRODUCT</th>
+                            <th>RATE/KG</th>
+                            <th>RATE/MT</th>
+                            <th>BOOKING</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Angles</td>
+                            <td>₹45.00 – 55.00</td>
+                            <td>₹45,000 – 55,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Channels</td>
+                            <td>₹47.00 – 57.00</td>
+                            <td>₹47,000 – 57,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Beams</td>
+                            <td>₹48.00 – 58.00</td>
+                            <td>₹48,000 – 58,000</td>
+                            <td><a href="form.html" class="book-btn">Book</a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

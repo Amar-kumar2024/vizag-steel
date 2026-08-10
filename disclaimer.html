@@ -1,0 +1,768 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Disclaimer | Vizag Steel Price-List</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f9;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #0a5a83;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 18px 20px;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            width: 48px;
+            height: 48px;
+            background: #0a5a83;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            color: #0a5a83;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand-subtitle {
+            font-size: 12px;
+            color: #777;
+            margin-top: 2px;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: #0a5a83;
+            border: 1px solid #0a5a83;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #0a5a83;
+            color: white;
+        }
+
+        /* PAGE TITLE */
+        .page-title {
+            background: linear-gradient(135deg, #0a5a83, #0875a5);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .page-title h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .disclaimer-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        /* INTRO */
+        .intro {
+            background: #f0f7fb;
+            border-left: 4px solid #0a5a83;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            color: #444;
+        }
+
+        /* SECTIONS */
+        .disclaimer-section {
+            margin-bottom: 32px;
+        }
+
+        .disclaimer-section h2 {
+            color: #0a5a83;
+            font-size: 21px;
+            margin-bottom: 12px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .disclaimer-section p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .disclaimer-section ul {
+            padding-left: 25px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+        }
+
+        .disclaimer-section li {
+            font-size: 15px;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        /* WARNING BOX */
+        .warning-box {
+            background: #fff8e6;
+            border-left: 4px solid #e2a600;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .warning-box h3 {
+            color: #9a7000;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .warning-box p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        /* IMPORTANT BOX */
+        .important {
+            background: #fff1f1;
+            border-left: 4px solid #c62828;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 35px;
+        }
+
+        .important h3 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .important p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: #f7fafc;
+            border: 1px solid #e1e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 7px;
+        }
+
+        .contact-box strong {
+            color: #0a5a83;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #073f5c;
+            color: white;
+            margin-top: 50px;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 13px;
+            opacity: 0.9;
+            margin: 4px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .home-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .page-title {
+                padding: 35px 15px;
+            }
+
+            .page-title h1 {
+                font-size: 27px;
+            }
+
+            .container {
+                margin: 25px auto;
+                padding: 0 12px;
+            }
+
+            .disclaimer-card {
+                padding: 22px 18px;
+                border-radius: 8px;
+            }
+
+            .disclaimer-section h2 {
+                font-size: 19px;
+            }
+
+            .disclaimer-section p,
+            .disclaimer-section li,
+            .warning-box p,
+            .important p {
+                font-size: 14px;
+            }
+
+            .brand-name {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-inner">
+
+            <div class="logo-area">
+
+                <div class="logo-box">
+                    VS
+                </div>
+
+                <div>
+                    <div class="brand-name">
+                        Vizag Steel Price-List
+                    </div>
+
+                    <div class="brand-subtitle">
+                        Steel Products & Price Information
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="home-btn">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- PAGE TITLE -->
+    <section class="page-title">
+
+        <h1>Disclaimer</h1>
+
+        <p>
+            Last Updated: 10 August 2026
+        </p>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <div class="disclaimer-card">
+
+            <!-- INTRO -->
+            <div class="intro">
+
+                The information provided on the
+                <strong>Vizag Steel Price-List Website</strong>
+                is intended for general informational and business
+                purposes. Please read this Disclaimer carefully before
+                using the Website or relying on any information provided
+                through it.
+
+            </div>
+
+
+            <!-- 1 -->
+            <section class="disclaimer-section">
+
+                <h2>1. General Information</h2>
+
+                <p>
+                    This Website provides information about steel products,
+                    product specifications, prices, availability, orders,
+                    and related services.
+                </p>
+
+                <p>
+                    While we make reasonable efforts to keep the information
+                    accurate and up to date, we do not guarantee that all
+                    information displayed on the Website will always be
+                    complete, accurate, current, or error-free.
+                </p>
+
+            </section>
+
+
+            <!-- 2 -->
+            <section class="disclaimer-section">
+
+                <h2>2. Price Information</h2>
+
+                <p>
+                    Steel prices may change frequently due to market
+                    conditions, raw material costs, taxes, transportation
+                    charges, supplier pricing, and other factors.
+                </p>
+
+                <p>
+                    Prices displayed on this Website should therefore be
+                    treated as indicative unless specifically confirmed
+                    through an official quotation, order confirmation,
+                    or other written communication.
+                </p>
+
+                <div class="warning-box">
+
+                    <h3>Price Notice</h3>
+
+                    <p>
+                        The price displayed on the Website may not represent
+                        the final price payable for a particular order.
+                    </p>
+
+                    <p>
+                        Please confirm the applicable price, taxes, delivery
+                        charges, and other applicable costs before completing
+                        a purchase.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- 3 -->
+            <section class="disclaimer-section">
+
+                <h2>3. Product Information</h2>
+
+                <p>
+                    Product names, specifications, sizes, grades, images,
+                    descriptions, and other product information are provided
+                    for informational purposes.
+                </p>
+
+                <p>
+                    Product specifications and availability may change
+                    without prior notice.
+                </p>
+
+                <p>
+                    Customers should verify the required product specifications
+                    before placing an order.
+                </p>
+
+            </section>
+
+
+            <!-- 4 -->
+            <section class="disclaimer-section">
+
+                <h2>4. No Guarantee of Availability</h2>
+
+                <p>
+                    Displaying a product on the Website does not necessarily
+                    guarantee that the product is currently available for
+                    purchase.
+                </p>
+
+                <p>
+                    Product availability may depend on stock levels, supplier
+                    confirmation, location, order quantity, and other
+                    commercial factors.
+                </p>
+
+            </section>
+
+
+            <!-- 5 -->
+            <section class="disclaimer-section">
+
+                <h2>5. Orders and Payments</h2>
+
+                <p>
+                    Information displayed on the Website does not by itself
+                    constitute a binding offer to sell any product.
+                </p>
+
+                <p>
+                    An order becomes confirmed only after the applicable
+                    product availability, price, payment, and other
+                    requirements have been verified.
+                </p>
+
+                <p>
+                    Payments may be processed through third-party payment
+                    gateways. We are not responsible for technical problems,
+                    transaction delays, or service interruptions caused by
+                    third-party payment providers.
+                </p>
+
+            </section>
+
+
+            <!-- 6 -->
+            <section class="disclaimer-section">
+
+                <h2>6. Third-Party Information</h2>
+
+                <p>
+                    The Website may contain information, references, links,
+                    logos, trademarks, or services belonging to third parties.
+                </p>
+
+                <p>
+                    Such references do not necessarily mean that we endorse,
+                    sponsor, or are affiliated with those third parties.
+                </p>
+
+            </section>
+
+
+            <!-- 7 -->
+            <section class="disclaimer-section">
+
+                <h2>7. External Links</h2>
+
+                <p>
+                    This Website may contain links to external websites for
+                    informational or convenience purposes.
+                </p>
+
+                <p>
+                    We do not control the content, availability, security,
+                    or privacy practices of external websites and are not
+                    responsible for their services or information.
+                </p>
+
+            </section>
+
+
+            <!-- 8 -->
+            <section class="disclaimer-section">
+
+                <h2>8. Limitation of Responsibility</h2>
+
+                <p>
+                    To the extent permitted by applicable law, we shall not
+                    be responsible for losses or damages arising from reliance
+                    on information displayed on the Website.
+                </p>
+
+                <p>This may include:</p>
+
+                <ul>
+
+                    <li>
+                        Errors or inaccuracies in product information.
+                    </li>
+
+                    <li>
+                        Changes in product prices.
+                    </li>
+
+                    <li>
+                        Product availability issues.
+                    </li>
+
+                    <li>
+                        Payment gateway or banking failures.
+                    </li>
+
+                    <li>
+                        Delivery delays.
+                    </li>
+
+                    <li>
+                        Website downtime or technical issues.
+                    </li>
+
+                    <li>
+                        Events beyond our reasonable control.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- 9 -->
+            <section class="disclaimer-section">
+
+                <h2>9. User Responsibility</h2>
+
+                <p>
+                    Users are responsible for independently verifying
+                    important information before placing an order or making
+                    a payment.
+                </p>
+
+                <p>
+                    Users should carefully check product specifications,
+                    quantity, price, delivery information, and applicable
+                    charges before confirming a transaction.
+                </p>
+
+            </section>
+
+
+            <!-- 10 -->
+            <section class="disclaimer-section">
+
+                <h2>10. No Professional Advice</h2>
+
+                <p>
+                    Information provided through this Website should not be
+                    considered legal, financial, engineering, construction,
+                    or other professional advice.
+                </p>
+
+                <p>
+                    Customers should consult an appropriately qualified
+                    professional where professional advice is required.
+                </p>
+
+            </section>
+
+
+            <!-- 11 -->
+            <section class="disclaimer-section">
+
+                <h2>11. Website Changes</h2>
+
+                <p>
+                    We reserve the right to modify, update, suspend, or
+                    discontinue any part of the Website, including product
+                    information, prices, features, or services, without
+                    prior notice.
+                </p>
+
+            </section>
+
+
+            <!-- 12 -->
+            <section class="disclaimer-section">
+
+                <h2>12. Intellectual Property</h2>
+
+                <p>
+                    Logos, trademarks, brand names, photographs, product
+                    images, and other intellectual property appearing on
+                    the Website may belong to their respective owners.
+                </p>
+
+                <p>
+                    Nothing on this Website should be interpreted as granting
+                    any user ownership or rights in third-party intellectual
+                    property.
+                </p>
+
+            </section>
+
+
+            <!-- IMPORTANT NOTICE -->
+            <div class="important">
+
+                <h3>Important Notice</h3>
+
+                <p>
+                    <strong>
+                        This Website is not the official website of
+                        Rashtriya Ispat Nigam Limited (RINL) /
+                        Visakhapatnam Steel Plant unless expressly stated
+                        otherwise.
+                    </strong>
+                </p>
+
+                <p>
+                    The name "Vizag Steel" may refer to products or
+                    information associated with Visakhapatnam Steel Plant.
+                    This Website does not claim to represent, own, control,
+                    or act on behalf of RINL.
+                </p>
+
+                <p>
+                    For official information, users should verify details
+                    through the official RINL website or other authorized
+                    sources.
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <section class="disclaimer-section"
+                     style="margin-top:35px;">
+
+                <h2>13. Contact Us</h2>
+
+                <p>
+                    If you have any questions regarding this Disclaimer,
+                    please contact us using the details provided on the
+                    Website.
+                </p>
+
+                <div class="contact-box">
+
+                    <p>
+                        <strong>Website:</strong>
+                        Vizag Steel Price-List Website
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        [Add your business email address]
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        [Add your business contact number]
+                    </p>
+
+                    <p>
+                        <strong>Address:</strong><br>
+
+                        Rashtriya Ispat Nigam Limited (RINL)<br>
+                        Administrative Building,<br>
+                        Visakhapatnam Steel Plant,<br>
+                        Visakhapatnam – 530031,<br>
+                        Andhra Pradesh, India.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Vizag Steel Price-List Website.
+            All Rights Reserved.
+        </p>
+
+        <p>
+
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="terms-conditions.html">
+                Terms & Conditions
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="refund-policy.html">
+                Refund Policy
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="disclaimer.html">
+                Disclaimer
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```

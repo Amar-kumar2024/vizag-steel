@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Steel Booking Inquiry</title>
+
+<style>
+
+/* ================================
+   PAGE
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef3f5;
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.quote-modal {
+    width: 100%;
+    max-width: 630px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border-radius: 0 0 22px 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.18);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.quote-header {
+
+    height: 94px;
+
+    padding: 0 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063b58,
+            #0877ad
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.quote-header h2 {
+
+    margin: 0;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+
+.close-btn {
+
+    border: none;
+
+    background: transparent;
+
+    color: #a9c5d3;
+
+    font-size: 38px;
+
+    font-weight: 200;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+
+.close-btn:hover {
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.quote-form {
+
+    padding: 32px 34px 26px;
+}
+
+
+/* ================================
+   FIELD
+================================ */
+
+.form-group {
+
+    margin-bottom: 24px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #252d32;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #d3dce2;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: 18px;
+
+    padding: 12px 15px;
+
+    outline: none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.form-group input {
+
+    height: 47px;
+}
+
+
+.form-group textarea {
+
+    height: 76px;
+
+    resize: vertical;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #7c8084;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #0877ad;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8,119,173,.10);
+}
+
+
+/* ================================
+   TWO COLUMN ROW
+================================ */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .quote-modal {
+
+        border-radius: 0 0 20px 20px;
+    }
+
+    .quote-header {
+
+        height: 85px;
+
+        padding: 0 24px;
+    }
+
+    .quote-header h2 {
+
+        font-size: 23px;
+    }
+
+    .quote-form {
+
+        padding: 28px 24px 24px;
+    }
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+}
+
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+.submit-btn {
+
+    width: 100%;
+
+    height: 57px;
+
+    margin-top: -3px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #0879b1;
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.submit-btn:hover {
+
+    background: #066a9b;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px
+        rgba(8,119,173,.25);
+}
+
+
+.submit-btn:active {
+
+    transform: scale(.98);
+}
+
+
+.submit-icon {
+
+    font-size: 27px;
+
+    transform: rotate(-8deg);
+}
+
+
+/* ================================
+   SUCCESS MESSAGE
+================================ */
+
+.form-message {
+
+    display: none;
+
+    text-align: center;
+
+    margin-top: 12px;
+
+    padding: 10px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+
+.form-message.success {
+
+    display: block;
+
+    background: #eaf8ef;
+
+    color: #168345;
+}
+
+
+.form-message.error {
+
+    display: block;
+
+    background: #fff0f0;
+
+    color: #c62828;
+}
+
+/* =========================================================
+   PREMIUM STEEL BOOKING FORM
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* ---------------------------------------------------------
+   PAGE BACKGROUND
+--------------------------------------------------------- */
+
+body {
+    margin: 0;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(14, 119, 173, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f4f8fa 0%,
+            #edf3f6 100%
+        );
+
+    color: #172b3a;
+}
+
+
+/* ---------------------------------------------------------
+   MODAL / FORM CARD
+--------------------------------------------------------- */
+
+.quote-modal,
+.booking-form,
+.form-container {
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 25px 60px rgba(0, 45, 70, 0.18),
+        0 8px 20px rgba(0, 0, 0, 0.06);
+
+    overflow: hidden;
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+.quote-modal-header,
+.form-header {
+
+    min-height: 94px;
+
+    padding: 0 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063b58 0%,
+            #08658f 55%,
+            #0b83b9 100%
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+}
+
+
+/* Small decorative shine */
+
+.quote-modal-header::after,
+.form-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #19a7df,
+            #ffffff,
+            #19a7df
+        );
+
+    opacity: .55;
+}
+
+
+.quote-modal-header h2,
+.form-header h2 {
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ---------------------------------------------------------
+   CLOSE BUTTON
+--------------------------------------------------------- */
+
+.quote-close {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    background: rgba(255,255,255,.08);
+
+    color: #d8edf7;
+
+    font-size: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+}
+
+
+.quote-close:hover {
+
+    background: rgba(255,255,255,.18);
+
+    color: white;
+
+    transform:
+        rotate(90deg)
+        scale(1.05);
+}
+
+
+/* ---------------------------------------------------------
+   FORM AREA
+--------------------------------------------------------- */
+
+.quote-form,
+.booking-form-inner {
+
+    padding:
+        30px 34px 28px;
+}
+
+
+/* ---------------------------------------------------------
+   LABEL
+--------------------------------------------------------- */
+
+.quote-field label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #173448;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: .1px;
+}
+
+
+/* ---------------------------------------------------------
+   INPUTS
+--------------------------------------------------------- */
+
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d5e0e7;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fbfdfe
+        );
+
+    color: #182d3b;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    outline: none;
+
+    transition:
+        border-color .22s ease,
+        box-shadow .22s ease,
+        background .22s ease,
+        transform .22s ease;
+}
+
+
+.quote-field input,
+.quote-field select {
+
+    height: 49px;
+
+    padding:
+        0 15px;
+}
+
+
+.quote-field textarea {
+
+    min-height: 92px;
+
+    padding:
+        13px 15px;
+
+    resize: vertical;
+}
+
+
+/* Placeholder */
+
+.quote-field input::placeholder,
+.quote-field textarea::placeholder {
+
+    color: #8a99a3;
+
+    font-weight: 400;
+}
+
+
+/* Focus */
+
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus {
+
+    border-color: #0a7eb5;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(10,126,181,.10),
+        0 5px 15px
+        rgba(10,126,181,.06);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   FIELD SPACING
+--------------------------------------------------------- */
+
+.quote-field {
+
+    margin-bottom: 19px;
+}
+
+
+/* ---------------------------------------------------------
+   TWO COLUMN AREA
+--------------------------------------------------------- */
+
+.quote-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE NUMBER
+--------------------------------------------------------- */
+
+.mobile-box {
+
+    display: grid;
+
+    grid-template-columns:
+        105px 1fr;
+
+    gap: 7px;
+}
+
+
+/* ---------------------------------------------------------
+   CONFIRM BUTTON
+--------------------------------------------------------- */
+
+.booking-confirm {
+
+    width: 100%;
+
+    height: 56px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0878ad 0%,
+            #0b8bc4 100%
+        );
+
+    color: white;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: .1px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px
+        rgba(8,120,173,.22);
+
+    transition:
+        .25s ease;
+}
+
+
+.booking-confirm:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #066b9c,
+            #087eb5
+        );
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(8,120,173,.30);
+}
+
+
+.booking-confirm:active {
+
+    transform:
+        translateY(0)
+        scale(.99);
+}
+
+
+/* Arrow */
+
+.send-icon {
+
+    font-size: 24px;
+
+    transition:
+        transform .25s ease;
+}
+
+
+.booking-confirm:hover .send-icon {
+
+    transform:
+        translateX(5px);
+}
+
+
+/* ---------------------------------------------------------
+   SCROLLBAR
+--------------------------------------------------------- */
+
+.quote-modal::-webkit-scrollbar {
+
+    width: 7px;
+}
+
+
+.quote-modal::-webkit-scrollbar-track {
+
+    background: #f1f5f7;
+}
+
+
+.quote-modal::-webkit-scrollbar-thumb {
+
+    background: #a9c4d1;
+
+    border-radius: 10px;
+}
+
+
+.quote-modal::-webkit-scrollbar-thumb:hover {
+
+    background: #0878ad;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .quote-modal,
+    .booking-form,
+    .form-container {
+
+        width: 100%;
+
+        border-radius: 20px;
+    }
+
+
+    .quote-modal-header,
+    .form-header {
+
+        min-height: 78px;
+
+        padding:
+            0 20px;
+    }
+
+
+    .quote-modal-header h2,
+    .form-header h2 {
+
+        font-size: 21px;
+    }
+
+
+    .quote-form,
+    .booking-form-inner {
+
+        padding:
+            24px 20px 22px;
+    }
+
+
+    .quote-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .quote-field label {
+
+        font-size: 13px;
+    }
+
+
+    .quote-field input,
+    .quote-field select,
+    .quote-field textarea {
+
+        font-size: 14px;
+    }
+
+
+    .booking-confirm {
+
+        height: 53px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     STEEL BOOKING INQUIRY
+================================================= -->
+
+<div class="quote-modal">
+
+
+    <!-- HEADER -->
+
+    <div class="quote-header">
+
+        <h2>
+            Steel Booking Inquiry
+        </h2>
+
+        <button
+            class="close-btn"
+            onclick="closeForm()"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- FORM -->
+
+    <form
+        class="quote-form"
+        id="bookingForm"
+    >
+
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+            <label for="name">
+                Full Name / Company Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+                required
+            >
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="name@company.com"
+                required
+            >
+
+        </div>
+
+
+        <!-- MOBILE + QTY -->
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label for="mobile">
+                    Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    placeholder="10 Digit No."
+                    maxlength="10"
+                    inputmode="numeric"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="quantity">
+                    Required Qty (Tons)
+                </label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    placeholder="Qty"
+                    min="1"
+                    step="0.01"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- ADDRESS -->
+
+        <div class="quote-field">
+
+    <label for="address">
+        Delivery Location
+    </label>
+
+    <input
+        type="text"
+        id="address"
+        name="address"
+        placeholder="Full address"
+        required
+    >
+
+</div>
+
+
+        <!-- PRODUCT -->
+
+        <div class="form-group">
+
+            <label for="product">
+                Product Requirement
+            </label>
+
+            <textarea
+                id="product"
+                placeholder="reqirement details"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <button type="submit" class="booking-confirm">
+
+    <span>
+        Booking Confirm
+    </span>
+
+    <span class="send-icon">
+        ➤
+    </span>
+
+</button>
+
+
+        <div
+            id="formMessage"
+            class="form-message"
+        ></div>
+
+
+    </form>
+
+</div>
+
+
+
+<script>
+
+/* =========================================
+   GOOGLE SHEET URL
+========================================= */
+
+const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbwihOekLUrBTtXu__l1PbYYdoKv-pQQb_gwxrC1wiATzk8EVj_TPA1RBJVTaueVJdOo9g/exec";
+
+/* =========================================
+   MOBILE NUMBER
+========================================= */
+
+document
+.getElementById("mobile")
+.addEventListener("input", function () {
+
+    this.value =
+        this.value.replace(
+            /[^0-9]/g,
+            ""
+        );
+
+});
+
+
+/* =========================================
+   FORM SUBMIT
+========================================= */
+
+document
+.getElementById("bookingForm")
+.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+
+    /* Get mobile */
+
+    const mobile =
+        document
+        .getElementById("mobile")
+        .value
+        .trim();
+
+
+    /* Mobile validation */
+
+    if (mobile.length !== 10) {
+
+        showMessage(
+            "Please enter a valid 10 digit mobile number.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    /* =========================================
+       GET FORM DATA
+    ========================================= */
+
+    const formData = {
+
+        name:
+            document
+            .getElementById("name")
+            .value
+            .trim(),
+
+        email:
+            document
+            .getElementById("email")
+            .value
+            .trim(),
+
+        mobile:
+            mobile,
+
+        quantity:
+            document
+            .getElementById("quantity")
+            .value
+            .trim(),
+
+        address:
+            document
+            .getElementById("address")
+            .value
+            .trim(),
+
+        product:
+            document
+            .getElementById("product")
+            .value
+            .trim()
+
+    };
+
+
+    /* =========================================
+       BUTTON LOADING
+    ========================================= */
+
+    const submitButton =
+        document.querySelector(
+            "#bookingForm button[type='submit']"
+        );
+
+
+    const originalButtonText =
+        submitButton.innerHTML;
+
+
+    submitButton.disabled = true;
+
+    submitButton.innerHTML =
+        "Submitting...";
+
+
+    /* =========================================
+       SEND TO GOOGLE SHEET
+    ========================================= */
+
+    try {
+
+        await fetch(
+            GOOGLE_SCRIPT_URL,
+            {
+
+                method: "POST",
+
+                mode: "no-cors",
+
+                headers: {
+
+                    "Content-Type":
+                        "text/plain;charset=utf-8"
+
+                },
+
+                body:
+                    JSON.stringify(formData)
+
+            }
+        );
+
+
+        /* =========================================
+           SUCCESS
+        ========================================= */
+
+        showMessage(
+            "Booking inquiry submitted successfully.",
+            "success"
+        );
+
+
+        console.log(
+            "Booking Data:",
+            formData
+        );
+
+
+        /* Reset form */
+
+        document
+        .getElementById("bookingForm")
+        .reset();
+
+
+    } catch (error) {
+
+        console.error(
+            "Google Sheet Error:",
+            error
+        );
+
+
+        showMessage(
+            "Unable to submit inquiry. Please try again.",
+            "error"
+        );
+
+    }
+
+
+    /* Restore button */
+
+    submitButton.disabled = false;
+
+    submitButton.innerHTML =
+        originalButtonText;
+
+});
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+function showMessage(text, type) {
+
+    const message =
+        document
+        .getElementById("formMessage");
+
+
+    message.textContent =
+        text;
+
+
+    message.className =
+        "form-message " + type;
+
+}
+
+
+/* =========================================
+   CLOSE
+========================================= */
+
+function closeForm() {
+
+    window.history.back();
+
+}
+
+</script>
+
+</body>
+</html>

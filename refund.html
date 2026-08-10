@@ -1,0 +1,769 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Refund Policy | Vizag Steel Price-List</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f9;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #0a5a83;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 18px 20px;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            width: 48px;
+            height: 48px;
+            background: #0a5a83;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            color: #0a5a83;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand-subtitle {
+            font-size: 12px;
+            color: #777;
+            margin-top: 2px;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: #0a5a83;
+            border: 1px solid #0a5a83;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #0a5a83;
+            color: white;
+        }
+
+        /* PAGE TITLE */
+        .page-title {
+            background: linear-gradient(135deg, #0a5a83, #0875a5);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .page-title h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* MAIN */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .refund-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        /* INTRO */
+        .intro {
+            background: #f0f7fb;
+            border-left: 4px solid #0a5a83;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            color: #444;
+        }
+
+        /* SECTIONS */
+        .refund-section {
+            margin-bottom: 32px;
+        }
+
+        .refund-section h2 {
+            color: #0a5a83;
+            font-size: 21px;
+            margin-bottom: 12px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .refund-section p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .refund-section ul {
+            padding-left: 25px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+        }
+
+        .refund-section li {
+            font-size: 15px;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        /* REFUND STATUS BOX */
+        .status-box {
+            background: #f7fafc;
+            border: 1px solid #e1e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .status-box strong {
+            color: #0a5a83;
+        }
+
+        /* IMPORTANT */
+        .important {
+            background: #fff8e6;
+            border-left: 4px solid #e2a600;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 35px;
+        }
+
+        .important h3 {
+            color: #9a7000;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .important p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: #f7fafc;
+            border: 1px solid #e1e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 7px;
+        }
+
+        .contact-box strong {
+            color: #0a5a83;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #073f5c;
+            color: white;
+            margin-top: 50px;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 13px;
+            opacity: 0.9;
+            margin: 4px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .home-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .page-title {
+                padding: 35px 15px;
+            }
+
+            .page-title h1 {
+                font-size: 27px;
+            }
+
+            .container {
+                margin: 25px auto;
+                padding: 0 12px;
+            }
+
+            .refund-card {
+                padding: 22px 18px;
+                border-radius: 8px;
+            }
+
+            .refund-section h2 {
+                font-size: 19px;
+            }
+
+            .refund-section p,
+            .refund-section li,
+            .important p {
+                font-size: 14px;
+            }
+
+            .brand-name {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-inner">
+
+            <div class="logo-area">
+
+                <div class="logo-box">
+                    VS
+                </div>
+
+                <div>
+                    <div class="brand-name">
+                        Vizag Steel Price-List
+                    </div>
+
+                    <div class="brand-subtitle">
+                        Steel Products & Price Information
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="home-btn">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- PAGE TITLE -->
+    <section class="page-title">
+
+        <h1>Refund Policy</h1>
+
+        <p>
+            Last Updated: 10 August 2026
+        </p>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <div class="refund-card">
+
+            <!-- INTRO -->
+            <div class="intro">
+
+                This Refund Policy explains the terms applicable to
+                payments and refund requests made through the
+                <strong>Vizag Steel Price-List Website</strong>.
+
+                Please read this policy carefully before placing an
+                order or making a payment.
+
+            </div>
+
+
+            <!-- 1 -->
+            <section class="refund-section">
+
+                <h2>1. General Refund Policy</h2>
+
+                <p>
+                    Payments made through the Website are generally
+                    treated as final once the transaction has been
+                    successfully processed.
+                </p>
+
+                <p>
+                    A refund is not automatically available merely
+                    because a customer changes their mind after making
+                    a successful payment.
+                </p>
+
+                <p>
+                    Any refund request will be reviewed according to
+                    the circumstances of the transaction and the
+                    applicable terms of the order.
+                </p>
+
+            </section>
+
+
+            <!-- 2 -->
+            <section class="refund-section">
+
+                <h2>2. Eligible Refund Situations</h2>
+
+                <p>
+                    A refund may be considered in circumstances such as:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Duplicate payment for the same order.
+                    </li>
+
+                    <li>
+                        Payment successfully deducted from the customer's
+                        account but the order was not successfully created
+                        due to a technical or transaction error.
+                    </li>
+
+                    <li>
+                        An order being cancelled by us before fulfilment
+                        where a refund is applicable.
+                    </li>
+
+                    <li>
+                        Any other situation where a refund is specifically
+                        approved by us under the applicable order terms.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Approval of a refund request is subject to verification
+                    of the transaction and the applicable terms.
+                </p>
+
+            </section>
+
+
+            <!-- 3 -->
+            <section class="refund-section">
+
+                <h2>3. Non-Refundable Situations</h2>
+
+                <p>
+                    Refunds may not be provided in situations including,
+                    but not limited to:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Change of mind after an order has been confirmed
+                        or processed.
+                    </li>
+
+                    <li>
+                        Incorrect information provided by the customer.
+                    </li>
+
+                    <li>
+                        Failure to provide an accurate delivery address
+                        or contact information.
+                    </li>
+
+                    <li>
+                        Orders that have already been dispatched or
+                        delivered, except where otherwise required by
+                        applicable law or agreed order terms.
+                    </li>
+
+                    <li>
+                        Delays or failures caused by banks, payment
+                        gateways, card networks, UPI services, or other
+                        third-party payment providers.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- 4 -->
+            <section class="refund-section">
+
+                <h2>4. Duplicate Payments</h2>
+
+                <p>
+                    If the same order is accidentally paid for more than
+                    once, the customer should contact us as soon as
+                    possible.
+                </p>
+
+                <p>
+                    After verification, an eligible duplicate payment
+                    may be refunded through the original payment method
+                    or another appropriate method.
+                </p>
+
+            </section>
+
+
+            <!-- 5 -->
+            <section class="refund-section">
+
+                <h2>5. Failed Payment but Amount Deducted</h2>
+
+                <p>
+                    In some cases, a payment may appear to fail even
+                    though the amount has been deducted from the customer's
+                    bank account or payment instrument.
+                </p>
+
+                <p>
+                    Customers should first allow the applicable bank or
+                    payment service provider to complete its transaction
+                    reconciliation process.
+                </p>
+
+                <p>
+                    If the amount is not automatically reversed or the
+                    order remains unsuccessful, the customer may contact
+                    us with the relevant transaction details for review.
+                </p>
+
+            </section>
+
+
+            <!-- 6 -->
+            <section class="refund-section">
+
+                <h2>6. Refund Request Process</h2>
+
+                <p>
+                    To request a refund, customers should contact us with
+                    sufficient transaction information, such as:
+                </p>
+
+                <ul>
+
+                    <li>Customer name</li>
+
+                    <li>Order number</li>
+
+                    <li>Transaction ID</li>
+
+                    <li>Payment date</li>
+
+                    <li>Amount paid</li>
+
+                    <li>Reason for requesting the refund</li>
+
+                </ul>
+
+                <p>
+                    We may request additional information where necessary
+                    to verify the transaction.
+                </p>
+
+            </section>
+
+
+            <!-- 7 -->
+            <section class="refund-section">
+
+                <h2>7. Refund Processing</h2>
+
+                <p>
+                    Once a refund has been approved, it will generally
+                    be initiated through the original payment method or
+                    the applicable payment service provider.
+                </p>
+
+                <div class="status-box">
+
+                    <p>
+                        <strong>Important:</strong>
+                        The time required for the refunded amount to
+                        appear in the customer's bank account, card,
+                        UPI account, or other payment instrument may
+                        depend on the payment gateway, bank, card issuer,
+                        or financial institution.
+                    </p>
+
+                </div>
+
+                <p>
+                    We are not responsible for delays caused by third-party
+                    financial institutions after the refund has been
+                    successfully initiated.
+                </p>
+
+            </section>
+
+
+            <!-- 8 -->
+            <section class="refund-section">
+
+                <h2>8. Cancellation and Refund</h2>
+
+                <p>
+                    Order cancellation and refund eligibility may depend
+                    on the stage at which the cancellation request is
+                    received.
+                </p>
+
+                <p>
+                    Once an order has been dispatched, delivered, or
+                    otherwise processed, cancellation or refund may not
+                    be possible unless specifically approved or required
+                    under applicable law.
+                </p>
+
+            </section>
+
+
+            <!-- 9 -->
+            <section class="refund-section">
+
+                <h2>9. Payment Gateway Issues</h2>
+
+                <p>
+                    Payments may be processed through third-party payment
+                    gateways or financial service providers.
+                </p>
+
+                <p>
+                    We are not responsible for technical failures,
+                    authorization failures, bank downtime, UPI issues,
+                    card-network failures, or delays caused by third-party
+                    payment providers.
+                </p>
+
+                <p>
+                    However, customers may contact us so that we can
+                    assist in reviewing the transaction status.
+                </p>
+
+            </section>
+
+
+            <!-- 10 -->
+            <section class="refund-section">
+
+                <h2>10. Fraudulent or Unauthorized Transactions</h2>
+
+                <p>
+                    If you believe that an unauthorized or fraudulent
+                    transaction has been made using your payment method,
+                    you should immediately contact your bank or payment
+                    service provider.
+                </p>
+
+                <p>
+                    You may also contact us with the transaction details
+                    so that we can review the transaction from our side.
+                </p>
+
+            </section>
+
+
+            <!-- 11 -->
+            <section class="refund-section">
+
+                <h2>11. Changes to This Refund Policy</h2>
+
+                <p>
+                    We may update or modify this Refund Policy from time
+                    to time to reflect changes in our services, payment
+                    processes, legal requirements, or business practices.
+                </p>
+
+                <p>
+                    Any updated version will be published on this page
+                    with a revised "Last Updated" date.
+                </p>
+
+            </section>
+
+
+            <!-- 12 -->
+            <section class="refund-section">
+
+                <h2>12. Contact Us</h2>
+
+                <p>
+                    If you have any questions regarding payments, refunds,
+                    cancellations, or transaction-related issues, please
+                    contact us using the details provided on the Website.
+                </p>
+
+                <div class="contact-box">
+
+                    <p>
+                        <strong>Website:</strong>
+                        Vizag Steel Price-List Website
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        [Add your business email address]
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        [Add your business contact number]
+                    </p>
+
+                    <p>
+                        <strong>Address:</strong><br>
+
+                        Rashtriya Ispat Nigam Limited (RINL)<br>
+                        Administrative Building,<br>
+                        Visakhapatnam Steel Plant,<br>
+                        Visakhapatnam – 530031,<br>
+                        Andhra Pradesh, India.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- IMPORTANT NOTICE -->
+            <div class="important">
+
+                <h3>Important Notice</h3>
+
+                <p>
+                    This Website is intended to provide information about
+                    Vizag Steel products, prices, orders, and related services.
+                </p>
+
+                <p>
+                    <strong>
+                        Unless expressly stated otherwise, this Website is
+                        not the official website of Rashtriya Ispat Nigam
+                        Limited (RINL) / Visakhapatnam Steel Plant and does
+                        not claim to represent or act on behalf of RINL.
+                    </strong>
+                </p>
+
+                <p>
+                    For official information regarding RINL and Visakhapatnam
+                    Steel Plant, users should refer to the official RINL website.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Vizag Steel Price-List Website.
+            All Rights Reserved.
+        </p>
+
+        <p>
+
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="terms-conditions.html">
+                Terms & Conditions
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="refund-policy.html">
+                Refund Policy
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```

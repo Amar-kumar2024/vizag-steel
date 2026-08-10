@@ -1,0 +1,978 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terms & Conditions | Vizag Steel Price-List</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f9;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #0a5a83;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 18px 20px;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            width: 48px;
+            height: 48px;
+            background: #0a5a83;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            color: #0a5a83;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand-subtitle {
+            font-size: 12px;
+            color: #777;
+            margin-top: 2px;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: #0a5a83;
+            border: 1px solid #0a5a83;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #0a5a83;
+            color: white;
+        }
+
+        /* PAGE TITLE */
+        .page-title {
+            background: linear-gradient(135deg, #0a5a83, #0875a5);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .page-title h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .terms-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        /* INTRO */
+        .intro {
+            background: #f0f7fb;
+            border-left: 4px solid #0a5a83;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            color: #444;
+        }
+
+        /* SECTIONS */
+        .terms-section {
+            margin-bottom: 32px;
+        }
+
+        .terms-section h2 {
+            color: #0a5a83;
+            font-size: 21px;
+            margin-bottom: 12px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .terms-section p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .terms-section ul {
+            padding-left: 25px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+        }
+
+        .terms-section li {
+            font-size: 15px;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        /* IMPORTANT NOTICE */
+        .important {
+            background: #fff8e6;
+            border-left: 4px solid #e2a600;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 35px;
+        }
+
+        .important h3 {
+            color: #9a7000;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .important p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: #f7fafc;
+            border: 1px solid #e1e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 7px;
+        }
+
+        .contact-box strong {
+            color: #0a5a83;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #073f5c;
+            color: white;
+            margin-top: 50px;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 13px;
+            opacity: 0.9;
+            margin: 4px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .home-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .page-title {
+                padding: 35px 15px;
+            }
+
+            .page-title h1 {
+                font-size: 27px;
+            }
+
+            .container {
+                margin: 25px auto;
+                padding: 0 12px;
+            }
+
+            .terms-card {
+                padding: 22px 18px;
+                border-radius: 8px;
+            }
+
+            .terms-section h2 {
+                font-size: 19px;
+            }
+
+            .terms-section p,
+            .terms-section li,
+            .important p {
+                font-size: 14px;
+            }
+
+            .brand-name {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-inner">
+
+            <div class="logo-area">
+
+                <div class="logo-box">
+                    VS
+                </div>
+
+                <div>
+                    <div class="brand-name">
+                        Vizag Steel Price-List
+                    </div>
+
+                    <div class="brand-subtitle">
+                        Steel Products & Price Information
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="home-btn">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- PAGE TITLE -->
+    <section class="page-title">
+
+        <h1>Terms & Conditions</h1>
+
+        <p>
+            Last Updated: 10 August 2026
+        </p>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <div class="terms-card">
+
+            <!-- INTRO -->
+            <div class="intro">
+
+                Welcome to the
+                <strong>Vizag Steel Price-List Website</strong>.
+
+                By accessing, browsing, or using this Website, you agree
+                to comply with and be bound by these Terms & Conditions.
+
+                Please read these terms carefully before using our Website
+                or placing an order.
+
+            </div>
+
+
+            <!-- 1 -->
+            <section class="terms-section">
+
+                <h2>1. About the Website</h2>
+
+                <p>
+                    This Website provides information regarding steel
+                    products, product specifications, prices, availability,
+                    orders, and related services.
+                </p>
+
+                <p>
+                    The information displayed on the Website is provided
+                    for general information and business purposes and may
+                    be updated or changed from time to time.
+                </p>
+
+            </section>
+
+
+            <!-- 2 -->
+            <section class="terms-section">
+
+                <h2>2. Acceptance of Terms</h2>
+
+                <p>
+                    By accessing or using this Website, you acknowledge
+                    that you have read, understood, and agreed to these
+                    Terms & Conditions.
+                </p>
+
+                <p>
+                    If you do not agree with any part of these Terms &
+                    Conditions, please do not use the Website or place
+                    an order through it.
+                </p>
+
+            </section>
+
+
+            <!-- 3 -->
+            <section class="terms-section">
+
+                <h2>3. Product Information</h2>
+
+                <p>
+                    We make reasonable efforts to ensure that product
+                    descriptions, specifications, prices, and other
+                    information displayed on the Website are accurate.
+                </p>
+
+                <p>However:</p>
+
+                <ul>
+                    <li>Product availability may change without prior notice.</li>
+
+                    <li>
+                        Product images may be for representation purposes only.
+                    </li>
+
+                    <li>
+                        Product specifications may be subject to manufacturer
+                        or supplier updates.
+                    </li>
+
+                    <li>
+                        Prices may change due to market conditions, taxes,
+                        transportation costs, or other applicable charges.
+                    </li>
+
+                    <li>
+                        The final price applicable to an order will be
+                        confirmed at the time of order confirmation.
+                    </li>
+                </ul>
+
+                <p>
+                    We reserve the right to correct any errors or
+                    inaccuracies in product information.
+                </p>
+
+            </section>
+
+
+            <!-- 4 -->
+            <section class="terms-section">
+
+                <h2>4. Prices</h2>
+
+                <p>
+                    All prices displayed on the Website may be subject
+                    to change without prior notice.
+                </p>
+
+                <p>
+                    Unless specifically stated otherwise, applicable taxes,
+                    transportation charges, loading/unloading charges,
+                    delivery charges, or other applicable fees may be
+                    additional.
+                </p>
+
+                <p>
+                    The final payable amount will be communicated or
+                    displayed before the order is confirmed.
+                </p>
+
+            </section>
+
+
+            <!-- 5 -->
+            <section class="terms-section">
+
+                <h2>5. Orders</h2>
+
+                <p>
+                    When you place an order through the Website, you are
+                    submitting a request to purchase the selected products.
+                </p>
+
+                <p>
+                    An order will be considered confirmed only after:
+                </p>
+
+                <ul>
+                    <li>
+                        Required order information has been received.
+                    </li>
+
+                    <li>
+                        Product availability has been confirmed.
+                    </li>
+
+                    <li>
+                        Payment or other agreed payment requirements
+                        have been successfully completed.
+                    </li>
+                </ul>
+
+                <p>
+                    We reserve the right to accept, reject, modify, or
+                    cancel an order where reasonably necessary, including
+                    in cases of product unavailability, pricing errors,
+                    suspected fraudulent activity, or technical errors.
+                </p>
+
+            </section>
+
+
+            <!-- 6 -->
+            <section class="terms-section">
+
+                <h2>6. Payment</h2>
+
+                <p>
+                    Payments may be processed through authorized
+                    third-party payment service providers.
+                </p>
+
+                <p>
+                    You agree to provide accurate information required
+                    for completing a transaction.
+                </p>
+
+                <p>
+                    We are not responsible for delays, failures, or
+                    interruptions caused by banks, payment gateways,
+                    UPI services, card networks, or other third-party
+                    payment providers.
+                </p>
+
+                <p>
+                    A payment is considered successfully received only
+                    after confirmation from the applicable payment
+                    service provider or our authorized system.
+                </p>
+
+            </section>
+
+
+            <!-- 7 -->
+            <section class="terms-section">
+
+                <h2>7. Order Cancellation</h2>
+
+                <p>
+                    An order may be cancelled before dispatch or processing,
+                    subject to the applicable cancellation terms.
+                </p>
+
+                <p>
+                    Once an order has been dispatched, delivered, or
+                    otherwise processed, cancellation may not be possible.
+                </p>
+
+                <p>
+                    Cancellation requests should be submitted as soon
+                    as possible through the contact details provided
+                    on the Website.
+                </p>
+
+            </section>
+
+
+            <!-- 8 -->
+            <section class="terms-section">
+
+                <h2>8. Refunds</h2>
+
+                <p>
+                    If a refund is approved, it will generally be processed
+                    through the original payment method or another method
+                    determined by us or the applicable payment provider.
+                </p>
+
+                <p>
+                    Refund processing time may depend on the payment gateway,
+                    bank, card issuer, or other financial institution.
+                </p>
+
+                <p>
+                    Any applicable deductions, charges, or non-refundable
+                    amounts will be communicated where applicable.
+                </p>
+
+            </section>
+
+
+            <!-- 9 -->
+            <section class="terms-section">
+
+                <h2>9. Delivery</h2>
+
+                <p>
+                    Delivery timelines provided on the Website or during
+                    order confirmation are estimates unless expressly
+                    stated otherwise.
+                </p>
+
+                <p>
+                    Delivery may be affected by:
+                </p>
+
+                <ul>
+                    <li>Transportation delays</li>
+                    <li>Weather conditions</li>
+                    <li>Government restrictions</li>
+                    <li>Availability of products</li>
+                    <li>Address-related issues</li>
+                    <li>Force majeure events</li>
+                    <li>
+                        Other circumstances beyond our reasonable control
+                    </li>
+                </ul>
+
+                <p>
+                    The customer is responsible for providing accurate
+                    delivery information.
+                </p>
+
+            </section>
+
+
+            <!-- 10 -->
+            <section class="terms-section">
+
+                <h2>10. Customer Responsibility</h2>
+
+                <p>Customers agree to:</p>
+
+                <ul>
+                    <li>Provide accurate and complete information.</li>
+
+                    <li>
+                        Verify product details before placing an order.
+                    </li>
+
+                    <li>
+                        Provide a correct delivery address and contact number.
+                    </li>
+
+                    <li>
+                        Make payments using valid and authorized payment methods.
+                    </li>
+
+                    <li>
+                        Not misuse or attempt to interfere with the Website.
+                    </li>
+
+                    <li>
+                        Not use the Website for unlawful or fraudulent purposes.
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <!-- 11 -->
+            <section class="terms-section">
+
+                <h2>11. Website Availability</h2>
+
+                <p>
+                    We make reasonable efforts to keep the Website
+                    available and functional.
+                </p>
+
+                <p>
+                    However, we do not guarantee that the Website will
+                    always be:
+                </p>
+
+                <ul>
+                    <li>Available without interruption.</li>
+
+                    <li>Free from technical errors.</li>
+
+                    <li>
+                        Free from viruses or other harmful components.
+                    </li>
+
+                    <li>
+                        Compatible with every device or browser.
+                    </li>
+                </ul>
+
+                <p>
+                    The Website may occasionally be unavailable due to
+                    maintenance, technical issues, updates, or circumstances
+                    beyond our control.
+                </p>
+
+            </section>
+
+
+            <!-- 12 -->
+            <section class="terms-section">
+
+                <h2>12. Intellectual Property</h2>
+
+                <p>
+                    Unless otherwise stated, the content of this Website,
+                    including text, graphics, logos, designs, photographs,
+                    layouts, and other materials, may be protected by
+                    applicable intellectual-property laws.
+                </p>
+
+                <p>
+                    You may not reproduce, modify, copy, distribute,
+                    publish, or commercially exploit Website content
+                    without appropriate authorization.
+                </p>
+
+                <p>
+                    Third-party trademarks, logos, product names, or
+                    copyrighted materials remain the property of their
+                    respective owners.
+                </p>
+
+            </section>
+
+
+            <!-- 13 -->
+            <section class="terms-section">
+
+                <h2>13. External Links</h2>
+
+                <p>
+                    The Website may contain links to third-party websites
+                    or services for convenience or informational purposes.
+                </p>
+
+                <p>
+                    We do not control and are not responsible for the
+                    content, availability, security, or privacy practices
+                    of third-party websites.
+                </p>
+
+                <p>
+                    Users should review the applicable terms and privacy
+                    policies of third-party websites before using them.
+                </p>
+
+            </section>
+
+
+            <!-- 14 -->
+            <section class="terms-section">
+
+                <h2>14. Limitation of Liability</h2>
+
+                <p>
+                    To the extent permitted by applicable law, we shall
+                    not be responsible for any indirect, incidental,
+                    special, consequential, or other losses arising from
+                    the use of, or inability to use, the Website.
+                </p>
+
+                <p>This may include losses resulting from:</p>
+
+                <ul>
+                    <li>Website interruptions</li>
+                    <li>Technical failures</li>
+                    <li>Incorrect information</li>
+                    <li>Third-party service failures</li>
+                    <li>Payment gateway failures</li>
+                    <li>Delivery delays</li>
+                    <li>
+                        Events beyond our reasonable control
+                    </li>
+                </ul>
+
+                <p>
+                    Nothing in these Terms & Conditions is intended to
+                    exclude liability that cannot legally be excluded
+                    under applicable law.
+                </p>
+
+            </section>
+
+
+            <!-- 15 -->
+            <section class="terms-section">
+
+                <h2>15. Fraudulent or Unauthorized Activities</h2>
+
+                <p>
+                    We reserve the right to suspend, restrict, or terminate
+                    access to the Website where we reasonably believe that
+                    a user is:
+                </p>
+
+                <ul>
+                    <li>Engaging in fraudulent activity.</li>
+
+                    <li>Providing false information.</li>
+
+                    <li>Attempting unauthorized access.</li>
+
+                    <li>Misusing payment services.</li>
+
+                    <li>Interfering with Website operations.</li>
+
+                    <li>
+                        Violating applicable laws or these Terms &
+                        Conditions.
+                    </li>
+                </ul>
+
+                <p>
+                    Where appropriate, relevant information may be provided
+                    to competent authorities as required by law.
+                </p>
+
+            </section>
+
+
+            <!-- 16 -->
+            <section class="terms-section">
+
+                <h2>16. Privacy</h2>
+
+                <p>
+                    Your use of this Website is also subject to our
+                    Privacy Policy.
+                </p>
+
+                <p>
+                    Our Privacy Policy explains how information may be
+                    collected, used, stored, and protected.
+                </p>
+
+                <p>
+                    Please review the
+                    <a href="privacy-policy.html"
+                       style="color:#0a5a83; font-weight:600;">
+                        Privacy Policy
+                    </a>
+                    before submitting personal information or placing
+                    an order.
+                </p>
+
+            </section>
+
+
+            <!-- 17 -->
+            <section class="terms-section">
+
+                <h2>17. Changes to These Terms</h2>
+
+                <p>
+                    We may update these Terms & Conditions from time to
+                    time to reflect changes in our services, Website
+                    functionality, legal requirements, or business practices.
+                </p>
+
+                <p>
+                    The updated version will be published on this page
+                    with a revised "Last Updated" date.
+                </p>
+
+                <p>
+                    Your continued use of the Website after the updated
+                    terms are published may constitute acceptance of the
+                    revised Terms & Conditions to the extent permitted
+                    by applicable law.
+                </p>
+
+            </section>
+
+
+            <!-- 18 -->
+            <section class="terms-section">
+
+                <h2>18. Governing Law</h2>
+
+                <p>
+                    These Terms & Conditions shall be governed by and
+                    interpreted in accordance with the applicable laws
+                    of India.
+                </p>
+
+                <p>
+                    Any dispute arising in connection with these Terms &
+                    Conditions or the use of the Website shall be subject
+                    to the jurisdiction of the competent courts in India.
+                </p>
+
+                <p>
+                    Where a specific written agreement, quotation, sales
+                    order, or applicable commercial contract governs a
+                    particular transaction, the terms of that agreement
+                    may apply to that transaction.
+                </p>
+
+            </section>
+
+
+            <!-- 19 -->
+            <section class="terms-section">
+
+                <h2>19. Contact Us</h2>
+
+                <p>
+                    If you have any questions regarding these Terms &
+                    Conditions, orders, payments, products, or services,
+                    please contact us using the details provided on the
+                    Website.
+                </p>
+
+                <div class="contact-box">
+
+                    <p>
+                        <strong>Website:</strong>
+                        Vizag Steel Price-List Website
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        [Add your business email address]
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        [Add your business contact number]
+                    </p>
+
+                    <p>
+                        <strong>Address:</strong><br>
+                        Rashtriya Ispat Nigam Limited (RINL)<br>
+                        Administrative Building,<br>
+                        Visakhapatnam Steel Plant,<br>
+                        Visakhapatnam – 530031,<br>
+                        Andhra Pradesh, India.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- IMPORTANT NOTICE -->
+            <div class="important">
+
+                <h3>Important Notice</h3>
+
+                <p>
+                    This Website is intended to provide information about
+                    Vizag Steel products, prices, orders, and related services.
+                </p>
+
+                <p>
+                    <strong>
+                        Unless expressly stated otherwise, this Website is
+                        not the official website of Rashtriya Ispat Nigam
+                        Limited (RINL) / Visakhapatnam Steel Plant and does
+                        not claim to represent or act on behalf of RINL.
+                    </strong>
+                </p>
+
+                <p>
+                    For official information regarding RINL and Visakhapatnam
+                    Steel Plant, users should refer to the official RINL website.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Vizag Steel Price-List Website.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="terms-conditions.html">
+                Terms & Conditions
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="index.html">
+                Home
+            </a>
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
