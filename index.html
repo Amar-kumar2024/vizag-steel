@@ -7502,6 +7502,626 @@ img {
 
 }
 
+/* =========================================================
+   FINAL MOBILE FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+
+        overflow-x: hidden !important;
+    }
+
+
+    /* Prevent every section from becoming wider than phone */
+
+    header,
+    main,
+    section,
+    footer,
+    div {
+        max-width: 100%;
+    }
+
+
+    img {
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       BRAND / HEADER LOGOS
+    ===================================================== */
+
+    .brand-area {
+
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 120px;
+
+        padding: 12px 12px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: space-between !important;
+
+        gap: 8px !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .brand-left {
+
+        min-width: 0 !important;
+
+        flex: 1 1 auto !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 8px !important;
+    }
+
+
+    .brand-left .main-logo {
+
+        width: 78px !important;
+
+        height: auto !important;
+
+        max-width: 78px !important;
+
+        object-fit: contain !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    .brand-divider,
+    .brand-div {
+        height: 65px !important;
+        margin: 0 4px !important;
+    }
+
+
+    .brand-copy {
+
+        min-width: 0 !important;
+
+        max-width: 170px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .brand-copy .title {
+
+        font-size: 14px !important;
+
+        line-height: 1.25 !important;
+
+        white-space: normal !important;
+    }
+
+
+    .brand-copy .subtitle {
+
+        font-size: 10px !important;
+
+        line-height: 1.25 !important;
+
+        white-space: normal !important;
+    }
+
+
+    /* Right-side logos */
+
+    .brand-right {
+
+        flex: 0 0 auto !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: flex-end !important;
+
+        gap: 5px !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .brand-right img,
+    .right-logo {
+
+        width: 42px !important;
+
+        height: 55px !important;
+
+        max-width: 42px !important;
+
+        object-fit: contain !important;
+
+        flex-shrink: 1 !important;
+    }
+
+
+    /* =====================================================
+       RATE BANNER
+    ===================================================== */
+
+    .steel-rate-banner {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+
+        display: flex !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .rate-title {
+
+        flex: 0 0 150px !important;
+
+        min-width: 150px !important;
+
+        max-width: 150px !important;
+
+        font-size: 11px !important;
+
+        padding: 0 7px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .rate-window {
+
+        flex: 1 1 auto !important;
+
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
+    .nav {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        height: auto !important;
+
+        min-height: 72px !important;
+
+        padding: 7px 12px !important;
+
+        gap: 4px !important;
+
+        display: flex !important;
+
+        flex-wrap: nowrap !important;
+
+        justify-content: flex-start !important;
+
+        align-items: center !important;
+
+        overflow-x: auto !important;
+
+        overflow-y: hidden !important;
+
+        scrollbar-width: none !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .nav::-webkit-scrollbar {
+        display: none !important;
+    }
+
+
+    .nav a {
+
+        flex: 0 0 auto !important;
+
+        font-size: 13px !important;
+
+        padding: 9px 10px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    .nav .quote-btn {
+
+        flex: 0 0 auto !important;
+
+        width: auto !important;
+
+        min-width: 205px !important;
+
+        height: 45px !important;
+
+        padding: 0 18px !important;
+
+        font-size: 13px !important;
+
+    }
+
+
+    /* =====================================================
+       HERO IMAGE
+    ===================================================== */
+
+    .hero,
+    .hero-section,
+    .hero-slider,
+    .slider {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        overflow: hidden !important;
+
+        position: relative !important;
+    }
+
+
+    .hero-slide,
+    .slide {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        position: relative !important;
+    }
+
+
+    .hero-slide img,
+    .slide img,
+    .hero img {
+
+        display: block !important;
+
+        position: relative !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        object-fit: contain !important;
+
+        object-position: center !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* =====================================================
+       ALL CONTENT CONTAINERS
+    ===================================================== */
+
+    .container,
+    .main-container,
+    .content-container,
+    .section-container {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        padding-left: 15px !important;
+
+        padding-right: 15px !important;
+
+        margin-left: auto !important;
+
+        margin-right: auto !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       PRODUCT CARDS
+    ===================================================== */
+
+    .products-grid,
+    .product-grid,
+    .steel-products {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 18px !important;
+    }
+
+
+    .product-card {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .product-card img {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* =====================================================
+       TABLES
+    ===================================================== */
+
+    /*
+       IMPORTANT:
+       Do NOT use min-width:650px on mobile.
+    */
+
+    .price-list,
+    .price-table-container,
+    .technical-table,
+    .table-container {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        overflow-x: auto !important;
+
+        -webkit-overflow-scrolling: touch;
+
+        box-sizing: border-box !important;
+    }
+
+
+    table {
+
+        max-width: 100% !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       TECHNICAL SPECIFICATION TABLE
+    ===================================================== */
+
+    .technical-table table {
+
+        width: 100% !important;
+
+        min-width: 560px !important;
+    }
+
+
+    /*
+       This scrollbar stays INSIDE the table,
+       instead of making the entire website scroll sideways.
+    */
+
+
+    /* =====================================================
+       PRODUCT PRICE TABLE
+    ===================================================== */
+
+    .price-table table {
+
+        min-width: 560px !important;
+
+        width: 100% !important;
+    }
+
+
+    /* =====================================================
+       SECTION HEADINGS
+    ===================================================== */
+
+    .section-title,
+    .section-heading {
+
+        max-width: 100% !important;
+
+        font-size: 25px !important;
+
+        line-height: 1.2 !important;
+
+        overflow-wrap: break-word !important;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-grid,
+    .footer-columns {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 25px !important;
+    }
+
+
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
+
+    .whatsapp-float {
+
+        width: 54px !important;
+
+        height: 54px !important;
+
+        right: 15px !important;
+
+        bottom: 15px !important;
+
+        font-size: 29px !important;
+
+        z-index: 999999 !important;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .brand-area {
+
+        min-height: 105px !important;
+
+        padding: 8px 8px !important;
+    }
+
+
+    .brand-left .main-logo {
+
+        width: 65px !important;
+
+        max-width: 65px !important;
+    }
+
+
+    .brand-copy {
+
+        max-width: 135px !important;
+    }
+
+
+    .brand-copy .title {
+
+        font-size: 12px !important;
+    }
+
+
+    .brand-copy .subtitle {
+
+        font-size: 9px !important;
+    }
+
+
+    .brand-right img,
+    .right-logo {
+
+        width: 35px !important;
+
+        max-width: 35px !important;
+
+        height: 45px !important;
+    }
+
+
+    .nav a {
+
+        font-size: 12px !important;
+
+        padding: 8px 8px !important;
+    }
+
+
+    .nav .quote-btn {
+
+        min-width: 185px !important;
+
+        font-size: 12px !important;
+    }
+
+
+    .rate-title {
+
+        flex-basis: 135px !important;
+
+        min-width: 135px !important;
+
+        max-width: 135px !important;
+
+        font-size: 10px !important;
+    }
+
+}
+
     </style>
 </head>
 
