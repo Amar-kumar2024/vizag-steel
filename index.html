@@ -7733,6 +7733,125 @@ img {
 
 }
 
+/* =========================================
+   MOBILE HERO - REMOVE EXTRA WHITE SPACE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .hero,
+    .hero-section,
+    .hero-container,
+    .hero-slider,
+    .slider {
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        background: #ffffff !important;
+        overflow: hidden !important;
+    }
+
+
+    .hero-slider,
+    .slider {
+
+        width: 100% !important;
+
+        /* Photo ki height */
+        aspect-ratio: 16 / 9 !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+    }
+
+
+    .hero-slide,
+    .slide {
+
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+    }
+
+
+    .hero-slide img,
+    .slide img {
+
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* Dots ko photo ke andar rakho */
+    .slider-dots,
+    .hero-dots {
+
+        position: absolute !important;
+
+        bottom: 10px !important;
+
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+
+        z-index: 20 !important;
+    }
+
+
+    /* Hero ke baad wala section */
+    .hero + section,
+    .hero-section + section,
+    .slider + section {
+
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .hero-slider,
+    .slider {
+
+        aspect-ratio: 16 / 9 !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        max-height: none !important;
+    }
+
+}
+
 
 
     </style>
