@@ -7525,17 +7525,14 @@ img {
 }
 
 /* =========================================================
-   MOBILE ONLY - HERO PHOTO FIX
-   Desktop design will NOT change
+   MOBILE HERO - FINAL CLEAN FIX
 ========================================================= */
 
 @media screen and (max-width: 768px) {
 
-    /* Main hero area */
+    /* Hero outer section */
     .hero,
     .hero-section,
-    .hero-slider,
-    .slider,
     .hero-container {
 
         width: 100% !important;
@@ -7543,39 +7540,47 @@ img {
 
         height: auto !important;
         min-height: 0 !important;
+        max-height: none !important;
 
-        padding: 0 !important;
         margin: 0 !important;
+        padding: 0 !important;
+
+        background: #ffffff !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* Slider */
+    .hero-slider,
+    .slider {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: 60vw !important;
+
+        min-height: 0 !important;
+        max-height: 400px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #ffffff !important;
 
         overflow: hidden !important;
 
         position: relative !important;
-
-        background: #536f7c !important;
     }
 
 
-    /* Slider height ONLY for phone */
-    .hero-slider,
-    .slider {
-
-        height: 56.25vw !important;
-
-        min-height: 190px !important;
-        max-height: 270px !important;
-
-        aspect-ratio: 16 / 9 !important;
-    }
-
-
-    /* Every slide */
+    /* Slides */
     .hero-slide,
     .slide {
 
         position: absolute !important;
 
-        top: 0 !important;
-        left: 0 !important;
+        inset: 0 !important;
 
         width: 100% !important;
         height: 100% !important;
@@ -7583,22 +7588,17 @@ img {
         margin: 0 !important;
         padding: 0 !important;
 
+        background: #ffffff !important;
+
         overflow: hidden !important;
     }
 
 
-    /* Hero image */
+    /* Image */
     .hero-slide img,
     .slide img {
 
         display: block !important;
-
-        position: absolute !important;
-
-        top: 50% !important;
-        left: 50% !important;
-
-        transform: translate(-50%, -50%) !important;
 
         width: 100% !important;
         height: 100% !important;
@@ -7606,12 +7606,14 @@ img {
         max-width: none !important;
         max-height: none !important;
 
+        margin: 0 !important;
+        padding: 0 !important;
+
         object-fit: contain !important;
 
         object-position: center center !important;
 
-        margin: 0 !important;
-        padding: 0 !important;
+        background: #ffffff !important;
     }
 
 
@@ -7619,25 +7621,13 @@ img {
     .hero-slide.active,
     .slide.active {
 
-        display: block !important;
-
-        visibility: visible !important;
-
         opacity: 1 !important;
 
+        visibility: visible !important;
     }
 
 
-    /* Prevent hidden slides from creating space */
-    .hero-slide:not(.active),
-    .slide:not(.active) {
-
-        display: none !important;
-
-    }
-
-
-    /* Slider dots */
+    /* Dots */
     .slider-dots,
     .hero-dots {
 
@@ -7649,7 +7639,20 @@ img {
 
         transform: translateX(-50%) !important;
 
-        z-index: 20 !important;
+        z-index: 50 !important;
+    }
+
+
+    /* IMPORTANT:
+       Remove any old fixed heights
+    */
+
+    .hero *,
+    .hero-section *,
+    .hero-container * {
+
+        max-height: 100%;
+
     }
 }
 
@@ -7660,18 +7663,45 @@ img {
 
 @media screen and (max-width: 480px) {
 
+    .hero,
+    .hero-section,
+    .hero-container {
+
+        background: #ffffff !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+    }
+
+
     .hero-slider,
     .slider {
 
         width: 100% !important;
 
-        height: 56.25vw !important;
+        height: 60vw !important;
 
-        min-height: 175px !important;
+        min-height: 190px !important;
 
-        max-height: 220px !important;
+        max-height: 260px !important;
 
-        aspect-ratio: 16 / 9 !important;
+        background: #ffffff !important;
+    }
+
+
+    .hero-slide,
+    .slide {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        background: #ffffff !important;
     }
 
 
@@ -7685,7 +7715,21 @@ img {
         object-fit: contain !important;
 
         object-position: center !important;
+
+        background: #ffffff !important;
     }
+}
+@media screen and (max-width: 768px) {
+
+    .hero,
+    .hero-section,
+    .hero-container,
+    .hero-slider,
+    .slider {
+
+        background: #ffffff !important;
+    }
+
 }
 
     </style>
